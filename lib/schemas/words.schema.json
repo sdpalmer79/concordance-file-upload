@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "title": "Word schema",
+    "required": ["_id", "book", "chapter", "verse", "wordCount", "word"],
+    "additionalProperties": false,
+    "properties": {
+        "_id" : {
+            "type": "integer"
+        },
+        "book": {
+            "type": "integer" 
+        },
+        "chapter": {
+            "type": "integer" 
+        },
+        "verse": {
+            "type": "integer" 
+        },
+        "wordCount": {
+            "type": "integer" 
+        },
+        "word": {
+            "type": "string" 
+        }
+    }
+}

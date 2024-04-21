@@ -19,5 +19,9 @@
     "tree-util": "^1.0.7",
     "uuid": "^9.0.1",
     "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "chai": "^5.1.0",
+    "chai-http": "^4.4.0"
   }
 }

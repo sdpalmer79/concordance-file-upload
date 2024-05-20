@@ -1,10 +1,10 @@
 {
     "type": "object",
     "title": "Symbols schema",
-    "required": ["_id", "chapter", "verse", "wordWithSymbols"],
+    "required": ["id", "chapter", "verse", "wordWithSymbols"],
     "additionalProperties": false,
     "properties": {
-        "_id" : {
+        "id" : {
             "type": "string"
         },
         "chapter": {

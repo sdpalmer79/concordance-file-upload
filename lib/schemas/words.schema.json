@@ -21,9 +21,6 @@
         },
         "word": {
             "type": "string" 
-        },
-        "w": {
-            "type": "string" 
         }
     }
 }

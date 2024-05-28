@@ -1,0 +1,31 @@
+{
+    "type": "object",
+    "title": "Parts of speech schema",
+    "required": ["partsOfSpeech"],
+    "additionalProperties": false,
+    "properties": {
+        "partsOfSpeech" : {
+            "type": "array",
+            "items": {
+                "type": "object",
+                "required": ["word", "partOfSpeech", "translation"],
+                "additionalProperties": false,
+                "properties": {
+                    "word": {
+                        "type": "string"
+                    },
+                    "partOfSpeech": {
+                        "type": "array",
+                        "items": {
+                            "type": "string",
+                            "enum": ["noun", "verb", "adjective", "adverb", "preposition", "conjunction"]
+                        }
+                    },
+                    "translation": {
+                        "type": "string"
+                    }
+                }
+            }
+        }
+    }
+}

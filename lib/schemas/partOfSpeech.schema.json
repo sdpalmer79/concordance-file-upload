@@ -1,24 +1,59 @@
 {
     "type": "object",
     "title": "Parts of speech schema",
-    "required": ["partsOfSpeech"],
+    "required": ["result"],
     "additionalProperties": false,
     "properties": {
-        "partsOfSpeech" : {
+        "result" : {
             "type": "array",
             "items": {
                 "type": "object",
-                "required": ["word", "partOfSpeech", "translation"],
+                "required": ["components", "translation"],
                 "additionalProperties": false,
                 "properties": {
-                    "word": {
-                        "type": "string"
-                    },
-                    "partOfSpeech": {
-                        "type": "array",
-                        "items": {
-                            "type": "string",
-                            "enum": ["noun", "verb", "adjective", "adverb", "preposition", "conjunction"]
+                    "components": {
+                        "type": "object",
+                        "required": ["word", "partsOfSpeech", "prefix", "suffix", "tense", "person", "gender", "number", "possessive"],
+                        "additionalProperties": false,
+                        "properties": {
+                            "word": {
+                                "type": "string"
+                            },
+                            "partsOfSpeech": {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "enum": ["noun", "pronoun", "verb", "adjective", "adverb", "preposition", "conjunction"]
+                                }
+                            },
+                            "prefix": {
+                                "type": ["string", "null"],
+                                "minLength": 1
+                            },
+                            "suffix": {
+                                "type": ["string", "null"],
+                                "minLength": 1
+                            },
+                            "tense": {
+                                "type": ["string", "null"],
+                                "minLength": 1
+                            },
+                            "person": {
+                                "type": ["string", "null"],
+                                "minLength": 1
+                            },
+                            "gender": {
+                                "type": ["string", "null"],
+                                "minLength": 1
+                            },
+                            "number": {
+                                "type": ["string", "null"],
+                                "minLength": 1
+                            },
+                            "possessive": {
+                                "type": ["string", "null"],
+                                "minLength": 1
+                            }
                         }
                     },
                     "translation": {

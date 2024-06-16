@@ -1,0 +1,20 @@
+{
+    "type": "object",
+    "title": "Symbols schema",
+    "required": ["id", "chapter", "verse", "wordWithSymbols"],
+    "additionalProperties": false,
+    "properties": {
+        "id" : {
+            "type": "string"
+        },
+        "chapter": {
+            "type": ["integer", "null"]
+        },
+        "verse": {
+            "type": ["integer", "null"] 
+        },
+        "wordWithSymbols": {
+            "type": "string" 
+        }
+    }
+}

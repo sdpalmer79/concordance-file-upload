@@ -49,14 +49,27 @@
                                     ]
                                 }
                             },
+                            "root": {
+                                "type": [
+                                    "string",
+                                    "null"
+                                ],
+                                "minLength": 1
+                            },
                             "prefix": {
-                                "type": "array",
+                                "type": [
+                                    "array",
+                                    "null"
+                                ],
                                 "items": {
                                     "type": "string"
                                 }
                             },
                             "suffix": {
-                                "type": "array",
+                                "type":  [
+                                    "array",
+                                    "null"
+                                ],
                                 "items": {
                                     "type": "string"
                                 }

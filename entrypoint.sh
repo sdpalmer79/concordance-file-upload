@@ -22,5 +22,15 @@ else
   exit 1
 fi
 
+if [ "$AI_API" = "ANTHROPIC" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+  echo "Error: ANTHROPIC_API_KEY must be set when AI_API is set to ANTHROPIC"
+  exit 1
+fi
+
+if [ "$AI_API" = "OPEN_AI" ] && [ -z "$OPENAI_API_KEY" ]; then
+  echo "Error: OPENAI_API_KEY is not set"
+  exit 1
+fi
+
 # Execute the application
 exec node server.js
